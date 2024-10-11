@@ -1,16 +1,104 @@
+/* Center the app and set the background */
 .App {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full viewport height */
-  background-color: #f0f0f0; /* Optional: Add some background color */
+  height: 100vh;
+  flex-direction: column; /* Stack items vertically */
+  background-color: #d1cfa1; /* Default background color */
+  transition: background-color 0.5s ease;
 }
 
+/* New quote button */
+#new-quote {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: transparent; /* Initially transparent, will be set dynamically */
+  color: white; /* Keep text color white */
+  transition: background-color 0.5s ease;
+}
+
+/* Tweet link */
+#tweet-quote {
+  background-color: transparent;
+  font-size: 1rem;
+  margin-right: 20px;
+  color: white; /* Keep text color white */
+  padding: 0;
+  border-radius: 5px;
+  transition: background-color 0.5s ease;
+  display: inline-block; 
+}
+
+#tweet-quote:hover {
+  color: white; /* On hover, keep text white */
+}
+
+#share {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Style the quote box */
 #quote-box {
   background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for aesthetics */
-  max-width: 600px;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
   text-align: center;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+}
+
+/* Style the text */
+#text {
+  font-size: 1.5rem;
+  color: #8c8a66;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+/* Style the author */
+#author {
+  font-size: 1.2rem;
+  color: #8c8a66;
+  font-weight: 600;
+  text-align: right;
+  margin-top: 10px;
+}
+
+/* Style the buttons */
+button, a#tweet-quote {
+  background-color: #9e9b75;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, a#tweet-quote:hover {
+  background-color: #b1ae89;
+}
+
+/* Designer name at the bottom */
+footer {
+  font-size: 0.9rem;
+  color: white;
+  margin-top: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 }
